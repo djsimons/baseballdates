@@ -67,39 +67,44 @@ header{padding:2.5rem 0 2rem;text-align:center;border-bottom:1px solid var(--bdr
 .many-card.mgr-c .many-label{color:var(--mgr)}
 .many-count{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--cream);line-height:1;margin-bottom:.2rem}
 .many-detail{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--txd);line-height:1.9}
+/* SPLIT TABLE */
+.split-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:5px;overflow:hidden}
+.split-col{}
+.split-head{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txd);padding:.5rem .75rem;border-bottom:1px solid var(--bdr);background:var(--bg3)}
 .top10{width:100%;border-collapse:collapse}
 .top10 tr{border-bottom:1px solid var(--bdr);transition:background .1s}
 .top10 tr:hover{background:var(--bg3)}
 .top10 tr:last-child{border-bottom:none}
-.top10 td{padding:.55rem .5rem;font-size:13px;vertical-align:middle}
-.top10 td:first-child{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--txd);width:2rem;text-align:right;padding-right:.75rem}
+.top10 td{padding:.5rem .5rem;font-size:13px;vertical-align:middle}
+.top10 td:first-child{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--txd);width:1.5rem;text-align:right;padding-right:.5rem}
 .pname{color:var(--txt)}
-.pos-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--txd);border:1px solid var(--bdr2);padding:.1rem .3rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.pos-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--txd);border:1px solid var(--bdr2);padding:.1rem .3rem;border-radius:2px;margin-left:.3rem;vertical-align:middle}
 .pdob{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--txd);text-align:right}
 .pdiff{font-family:'IBM Plex Mono',monospace;font-size:11px;text-align:right;white-space:nowrap}
 .pdiff.older{color:var(--older)}
 .pdiff.younger{color:var(--younger)}
-.hof-star{color:var(--hof);font-size:10px;margin-left:3px}
-.war-val{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gl);text-align:right}
-.events-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:5px;overflow:hidden;margin-bottom:1px}
-.events-grid-ws{background:var(--bdr);border:1px solid var(--bdr);border-top:none;border-radius:0 0 5px 5px;overflow:hidden}
-.ecard{background:var(--bg2);padding:1rem 1.1rem;position:relative;transition:background .12s}
+.hof-star{color:var(--hof);font-size:10px;margin-left:2px}
+.war-val{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gl);text-align:right;white-space:nowrap}
+/* EVENTS */
+.events-wrap{border:1px solid var(--bdr);border-radius:5px;overflow:hidden}
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr)}
+.ecard{background:var(--bg2);padding:.9rem 1.1rem;position:relative;transition:background .12s}
 .ecard:hover{background:var(--bg3)}
 .ecard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--evt)}
 .ecard-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--evt);margin-bottom:.35rem}
-.ecard-name{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.03em;color:var(--cream);line-height:1;margin-bottom:.15rem}
-.ecard-team{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--txd)}
-.ws-card{background:var(--bg2);padding:1rem 1.1rem;position:relative;transition:background .12s}
+.ecard-name{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;color:var(--cream);line-height:1}
+.ws-divider{height:1px;background:var(--bdr)}
+.ws-card{background:var(--bg2);padding:1.25rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;transition:background .12s}
 .ws-card:hover{background:var(--bg3)}
-.ws-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--hof)}
-.ws-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--hof);margin-bottom:.3rem}
-.ws-matchup{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em;color:var(--cream);line-height:1}
-.ws-detail{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--txd);margin-top:.3rem}
-.ws-note{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--txd);padding:1rem 1.1rem;font-style:italic}
+.ws-card::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--hof)}
+.ws-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--hof);margin-bottom:.5rem}
+.ws-matchup{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.05em;color:var(--cream);line-height:1}
+.ws-detail{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--txd);margin-top:.4rem}
+.ws-note{background:var(--bg2);padding:1.25rem;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--txd);font-style:italic}
 footer{border-top:1px solid var(--bdr);padding:1.5rem 0;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--txd);letter-spacing:.05em;line-height:2}
 footer a{color:var(--gl);text-decoration:none}
 @media(max-width:640px){
-  .bg3,.bg2,.events-grid{grid-template-columns:1fr}
+  .bg3,.bg2,.split-wrap,.awards-grid{grid-template-columns:1fr}
   .dob-input{font-size:1rem}
 }
 </style>
@@ -145,13 +150,25 @@ footer a{color:var(--gl);text-decoration:none}
     </div>
   </div>
   <div class="sec">
-    <div class="sec-head"><span class="sec-title" id="draft-title">Top WAR, Births</span><span class="sec-meta" id="draft-meta"></span></div>
-    <table class="top10" id="draft-top10" style="border:1px solid var(--bdr);border-radius:5px;overflow:hidden"></table>
+    <div class="sec-head"><span class="sec-title" id="war-title">Top WAR</span><span class="sec-meta" id="war-meta"></span></div>
+    <div class="split-wrap">
+      <div class="split-col">
+        <div class="split-head" id="war-year-label">Birth year</div>
+        <table class="top10" id="war-year-table"></table>
+      </div>
+      <div class="split-col">
+        <div class="split-head" id="war-bday-label">Birthday</div>
+        <table class="top10" id="war-bday-table"></table>
+      </div>
+    </div>
   </div>
   <div class="sec">
     <div class="sec-head"><span class="sec-title" id="events-title">Birth Year in Baseball</span></div>
-    <div class="events-grid" id="awards-grid"></div>
-    <div class="events-grid-ws" id="ws-row"></div>
+    <div class="events-wrap">
+      <div class="awards-grid" id="awards-grid"></div>
+      <div class="ws-divider"></div>
+      <div id="ws-row"></div>
+    </div>
   </div>
 </div>
 <footer>
@@ -166,6 +183,20 @@ const DB=[{"id":"aardsda01","n":"David Aardsma","b":"1981-12-27","d":"2004-04-06
 const AWARDS={"1957":[{"a":"Most Valuable Player","lg":"NL","pid":"aaronha01","t":"ML1"},{"a":"Rookie of the Year","lg":"AL","pid":"kubekto01","t":"NYA"},{"a":"Most Valuable Player","lg":"AL","pid":"mantlmi01","t":"NYA"},{"a":"Rookie of the Year","lg":"NL","pid":"sanfoja02","t":"PHI"},{"a":"Cy Young Award","lg":"ML","pid":"spahnwa01","t":"ML1"}],"2020":[{"a":"Most Valuable Player","lg":"AL","pid":"abreujo02","t":"CHA"},{"a":"Cy Young Award","lg":"NL","pid":"bauertr01","t":"CIN"},{"a":"Cy Young Award","lg":"AL","pid":"biebesh01","t":"CLE"},{"a":"Most Valuable Player","lg":"NL","pid":"freemfr01","t":"ATL"},{"a":"Rookie of the Year","lg":"AL","pid":"lewisky01","t":"SEA"},{"a":"Rookie of the Year","lg":"NL","pid":"willide03","t":"MIL"}],"2014":[{"a":"Rookie of the Year","lg":"AL","pid":"abreujo02","t":"CHA"},{"a":"Rookie of the Year","lg":"NL","pid":"degroja01","t":"NYN"},{"a":"Cy Young Award","lg":"NL","pid":"kershcl01","t":"LAN"},{"a":"Most Valuable Player","lg":"NL","pid":"kershcl01","t":"LAN"},{"a":"Cy Young Award","lg":"AL","pid":"klubeco01","t":"CLE"},{"a":"Most Valuable Player","lg":"AL","pid":"troutmi01","t":"LAA"}],"2023":[{"a":"Most Valuable Player","lg":"NL","pid":"acunaro01","t":"ATL"},{"a":"Rookie of the Year","lg":"NL","pid":"carroco02","t":"ARI"},{"a":"Cy Young Award","lg":"AL","pid":"colege01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"hendegu01","t":"BAL"},{"a":"Most Valuable Player","lg":"AL","pid":"ohtansh01","t":"LAA"},{"a":"Cy Young Award","lg":"NL","pid":"snellbl01","t":"SDN"}],"2018":[{"a":"Rookie of the Year","lg":"NL","pid":"acunaro01","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"bettsmo01","t":"BOS"},{"a":"Cy Young Award","lg":"NL","pid":"degroja01","t":"NYN"},{"a":"Rookie of the Year","lg":"AL","pid":"ohtansh01","t":"LAA"},{"a":"Cy Young Award","lg":"AL","pid":"snellbl01","t":"TBA"},{"a":"Most Valuable Player","lg":"NL","pid":"yelicch01","t":"MIL"}],"1966":[{"a":"Rookie of the Year","lg":"AL","pid":"ageeto01","t":"CHA"},{"a":"Most Valuable Player","lg":"NL","pid":"clemero01","t":"PIT"},{"a":"Rookie of the Year","lg":"NL","pid":"helmsto01","t":"CIN"},{"a":"Cy Young Award","lg":"ML","pid":"koufasa01","t":"LAN"},{"a":"Most Valuable Player","lg":"AL","pid":"robinfr02","t":"BAL"}],"2022":[{"a":"Cy Young Award","lg":"NL","pid":"alcansa01","t":"MIA"},{"a":"Most Valuable Player","lg":"NL","pid":"goldspa01","t":"SLN"},{"a":"Rookie of the Year","lg":"NL","pid":"harrimi04","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"judgeaa01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"rodriju01","t":"SEA"},{"a":"Cy Young Award","lg":"AL","pid":"verlaju01","t":"HOU"}],"1972":[{"a":"Most Valuable Player","lg":"AL","pid":"allendi01","t":"CHA"},{"a":"Most Valuable Player","lg":"NL","pid":"benchjo01","t":"CIN"},{"a":"Cy Young Award","lg":"NL","pid":"carltst01","t":"PHI"},{"a":"Rookie of the Year","lg":"AL","pid":"fiskca01","t":"BOS"},{"a":"Rookie of the Year","lg":"NL","pid":"matlajo01","t":"NYN"},{"a":"Cy Young Award","lg":"AL","pid":"perryga01","t":"CLE"}],"1964":[{"a":"Rookie of the Year","lg":"NL","pid":"allendi01","t":"PHI"},{"a":"Most Valuable Player","lg":"NL","pid":"boyerke01","t":"SLN"},{"a":"Cy Young Award","lg":"ML","pid":"chancde01","t":"LAA"},{"a":"Rookie of the Year","lg":"AL","pid":"olivato01","t":"MIN"},{"a":"Most Valuable Player","lg":"AL","pid":"robinbr01","t":"BAL"}],"1959":[{"a":"Rookie of the Year","lg":"AL","pid":"allisbo01","t":"WS1"},{"a":"Most Valuable Player","lg":"NL","pid":"bankser01","t":"CHN"},{"a":"Most Valuable Player","lg":"AL","pid":"foxne01","t":"CHA"},{"a":"Rookie of the Year","lg":"NL","pid":"mccovwi01","t":"SFN"},{"a":"Cy Young Award","lg":"ML","pid":"wynnea01","t":"CHA"}],"1990":[{"a":"Rookie of the Year","lg":"AL","pid":"alomasa02","t":"CLE"},{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"PIT"},{"a":"Cy Young Award","lg":"NL","pid":"drabedo01","t":"PIT"},{"a":"Most Valuable Player","lg":"AL","pid":"henderi01","t":"OAK"},{"a":"Rookie of the Year","lg":"NL","pid":"justida01","t":"ATL"},{"a":"Cy Young Award","lg":"AL","pid":"welchbo01","t":"OAK"}],"2019":[{"a":"Rookie of the Year","lg":"NL","pid":"alonspe01","t":"NYN"},{"a":"Rookie of the Year","lg":"AL","pid":"alvaryo01","t":"HOU"},{"a":"Most Valuable Player","lg":"NL","pid":"bellico01","t":"LAN"},{"a":"Cy Young Award","lg":"NL","pid":"degroja01","t":"NYN"},{"a":"Most Valuable Player","lg":"AL","pid":"troutmi01","t":"LAA"},{"a":"Cy Young Award","lg":"AL","pid":"verlaju01","t":"HOU"}],"2017":[{"a":"Most Valuable Player","lg":"AL","pid":"altuvjo01","t":"HOU"},{"a":"Rookie of the Year","lg":"NL","pid":"bellico01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"judgeaa01","t":"NYA"},{"a":"Cy Young Award","lg":"AL","pid":"klubeco01","t":"CLE"},{"a":"Cy Young Award","lg":"NL","pid":"scherma01","t":"WAS"},{"a":"Most Valuable Player","lg":"NL","pid":"stantmi03","t":"MIA"}],"1956":[{"a":"Rookie of the Year","lg":"AL","pid":"aparilu01","t":"CHA"},{"a":"Most Valuable Player","lg":"AL","pid":"mantlmi01","t":"NYA"},{"a":"Cy Young Award","lg":"ML","pid":"newcodo01","t":"BRO"},{"a":"Most Valuable Player","lg":"NL","pid":"newcodo01","t":"BRO"},{"a":"Rookie of the Year","lg":"NL","pid":"robinfr02","t":"CIN"}],"2021":[{"a":"Rookie of the Year","lg":"AL","pid":"arozara01","t":"TBA"},{"a":"Cy Young Award","lg":"NL","pid":"burneco01","t":"MIL"},{"a":"Most Valuable Player","lg":"NL","pid":"harpebr03","t":"PHI"},{"a":"Rookie of the Year","lg":"NL","pid":"indiajo01","t":"CIN"},{"a":"Most Valuable Player","lg":"AL","pid":"ohtansh01","t":"LAA"},{"a":"Cy Young Award","lg":"AL","pid":"rayro02","t":"TOR"}],"2015":[{"a":"Cy Young Award","lg":"NL","pid":"arrieja01","t":"CHN"},{"a":"Rookie of the Year","lg":"NL","pid":"bryankr01","t":"CHN"},{"a":"Rookie of the Year","lg":"AL","pid":"correca01","t":"HOU"},{"a":"Most Valuable Player","lg":"AL","pid":"donaljo02","t":"TOR"},{"a":"Most Valuable Player","lg":"NL","pid":"harpebr03","t":"WAS"},{"a":"Cy Young Award","lg":"AL","pid":"keuchda01","t":"HOU"}],"1994":[{"a":"Most Valuable Player","lg":"NL","pid":"bagweje01","t":"HOU"},{"a":"Cy Young Award","lg":"AL","pid":"coneda01","t":"KCA"},{"a":"Rookie of the Year","lg":"AL","pid":"hamelbo01","t":"KCA"},{"a":"Cy Young Award","lg":"NL","pid":"maddugr01","t":"ATL"},{"a":"Rookie of the Year","lg":"NL","pid":"mondera01","t":"LAN"},{"a":"Most Valuable Player","lg":"AL","pid":"thomafr04","t":"CHA"}],"1991":[{"a":"Rookie of the Year","lg":"NL","pid":"bagweje01","t":"HOU"},{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"BOS"},{"a":"Cy Young Award","lg":"NL","pid":"glavito02","t":"ATL"},{"a":"Rookie of the Year","lg":"AL","pid":"knoblch01","t":"MIN"},{"a":"Most Valuable Player","lg":"NL","pid":"pendlte01","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"ripkeca01","t":"BAL"}],"1968":[{"a":"Rookie of the Year","lg":"AL","pid":"bahnsst01","t":"NYA"},{"a":"Rookie of the Year","lg":"NL","pid":"benchjo01","t":"CIN"},{"a":"Cy Young Award","lg":"NL","pid":"gibsobo01","t":"SLN"},{"a":"Most Valuable Player","lg":"NL","pid":"gibsobo01","t":"SLN"},{"a":"Cy Young Award","lg":"AL","pid":"mclaide01","t":"DET"},{"a":"Most Valuable Player","lg":"AL","pid":"mclaide01","t":"DET"}],"2009":[{"a":"Rookie of the Year","lg":"AL","pid":"bailean01","t":"OAK"},{"a":"Rookie of the Year","lg":"NL","pid":"coghlch01","t":"FLO"},{"a":"Cy Young Award","lg":"AL","pid":"greinza01","t":"KCA"},{"a":"Cy Young Award","lg":"NL","pid":"linceti01","t":"SFN"},{"a":"Most Valuable Player","lg":"AL","pid":"mauerjo01","t":"MIN"},{"a":"Most Valuable Player","lg":"NL","pid":"pujolal01","t":"SLN"}],"2025":[{"a":"Rookie of the Year","lg":"NL","pid":"baldwdr01","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"judgeaa01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"kurtzni01","t":"ATH"},{"a":"Most Valuable Player","lg":"NL","pid":"ohtansh01","t":"LAN"},{"a":"Cy Young Award","lg":"NL","pid":"skenepa01","t":"PIT"},{"a":"Cy Young Award","lg":"AL","pid":"skubata01","t":"DET"}],"1958":[{"a":"Most Valuable Player","lg":"NL","pid":"bankser01","t":"CHN"},{"a":"Rookie of the Year","lg":"NL","pid":"cepedor01","t":"SFN"},{"a":"Most Valuable Player","lg":"AL","pid":"jenseja01","t":"BOS"},{"a":"Rookie of the Year","lg":"AL","pid":"pearsal02","t":"WS1"},{"a":"Cy Young Award","lg":"ML","pid":"turlebo01","t":"NYA"}],"2004":[{"a":"Rookie of the Year","lg":"NL","pid":"bayja01","t":"PIT"},{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"SFN"},{"a":"Cy Young Award","lg":"NL","pid":"clemero02","t":"HOU"},{"a":"Rookie of the Year","lg":"AL","pid":"crosbbo01","t":"OAK"},{"a":"Most Valuable Player","lg":"AL","pid":"guerrvl01","t":"ANA"},{"a":"Cy Young Award","lg":"AL","pid":"santajo01","t":"MIN"}],"1979":[{"a":"Most Valuable Player","lg":"AL","pid":"baylodo01","t":"CAL"},{"a":"Rookie of the Year","lg":"AL","pid":"castijo01","t":"MIN"},{"a":"Cy Young Award","lg":"AL","pid":"flanami01","t":"BAL"},{"a":"Rookie of the Year","lg":"AL","pid":"griffal01","t":"TOR"},{"a":"Most Valuable Player","lg":"NL","pid":"hernake01","t":"SLN"},{"a":"Most Valuable Player","lg":"NL","pid":"stargwi01","t":"PIT"},{"a":"Rookie of the Year","lg":"NL","pid":"sutclri01","t":"LAN"},{"a":"Cy Young Award","lg":"NL","pid":"suttebr01","t":"CHN"}],"1987":[{"a":"Cy Young Award","lg":"NL","pid":"bedrost01","t":"PHI"},{"a":"Most Valuable Player","lg":"AL","pid":"bellge02","t":"TOR"},{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"BOS"},{"a":"Most Valuable Player","lg":"NL","pid":"dawsoan01","t":"CHN"},{"a":"Rookie of the Year","lg":"AL","pid":"mcgwima01","t":"OAK"},{"a":"Rookie of the Year","lg":"NL","pid":"santibe01","t":"SDN"}],"1999":[{"a":"Rookie of the Year","lg":"AL","pid":"beltrca01","t":"KCA"},{"a":"Cy Young Award","lg":"NL","pid":"johnsra05","t":"ARI"},{"a":"Most Valuable Player","lg":"NL","pid":"jonesch06","t":"ATL"},{"a":"Cy Young Award","lg":"AL","pid":"martipe02","t":"BOS"},{"a":"Most Valuable Player","lg":"AL","pid":"rodriiv01","t":"TEX"},{"a":"Rookie of the Year","lg":"NL","pid":"willisc01","t":"CIN"}],"1970":[{"a":"Most Valuable Player","lg":"NL","pid":"benchjo01","t":"CIN"},{"a":"Cy Young Award","lg":"NL","pid":"gibsobo01","t":"SLN"},{"a":"Rookie of the Year","lg":"NL","pid":"mortoca01","t":"MON"},{"a":"Rookie of the Year","lg":"AL","pid":"munsoth01","t":"NYA"},{"a":"Cy Young Award","lg":"AL","pid":"perryji01","t":"MIN"},{"a":"Most Valuable Player","lg":"AL","pid":"powelbo01","t":"BAL"}],"1951":[{"a":"Most Valuable Player","lg":"AL","pid":"berrayo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"camparo01","t":"BRO"},{"a":"Rookie of the Year","lg":"NL","pid":"mayswi01","t":"NY1"},{"a":"Rookie of the Year","lg":"AL","pid":"mcdougi01","t":"NYA"}],"1954":[{"a":"Most Valuable Player","lg":"AL","pid":"berrayo01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"grimbo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"mayswi01","t":"NY1"},{"a":"Rookie of the Year","lg":"NL","pid":"moonwa01","t":"SLN"}],"1955":[{"a":"Most Valuable Player","lg":"AL","pid":"berrayo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"camparo01","t":"BRO"},{"a":"Rookie of the Year","lg":"AL","pid":"scorehe01","t":"CLE"},{"a":"Rookie of the Year","lg":"NL","pid":"virdobi01","t":"SLN"}],"2003":[{"a":"Rookie of the Year","lg":"AL","pid":"berroan01","t":"KCA"},{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"SFN"},{"a":"Cy Young Award","lg":"NL","pid":"gagneer01","t":"LAN"},{"a":"Cy Young Award","lg":"AL","pid":"hallaro01","t":"TOR"},{"a":"Most Valuable Player","lg":"AL","pid":"rodrial01","t":"TEX"},{"a":"Rookie of the Year","lg":"NL","pid":"willido03","t":"FLO"}],"1952":[{"a":"Rookie of the Year","lg":"NL","pid":"blackjo02","t":"BRO"},{"a":"Rookie of the Year","lg":"AL","pid":"byrdha01","t":"PHA"},{"a":"Most Valuable Player","lg":"NL","pid":"sauerha01","t":"CHN"},{"a":"Most Valuable Player","lg":"AL","pid":"shantbo01","t":"PHA"}],"1965":[{"a":"Rookie of the Year","lg":"AL","pid":"blefacu01","t":"BAL"},{"a":"Cy Young Award","lg":"ML","pid":"koufasa01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"lefebji01","t":"LAN"},{"a":"Most Valuable Player","lg":"NL","pid":"mayswi01","t":"SFN"},{"a":"Most Valuable Player","lg":"AL","pid":"versazo01","t":"MIN"}],"1971":[{"a":"Cy Young Award","lg":"AL","pid":"bluevi01","t":"OAK"},{"a":"Most Valuable Player","lg":"AL","pid":"bluevi01","t":"OAK"},{"a":"Rookie of the Year","lg":"AL","pid":"chambch01","t":"CLE"},{"a":"Cy Young Award","lg":"NL","pid":"jenkife01","t":"CHN"},{"a":"Most Valuable Player","lg":"NL","pid":"torrejo01","t":"SLN"},{"a":"Rookie of the Year","lg":"NL","pid":"williea02","t":"ATL"}],"1992":[{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"PIT"},{"a":"Cy Young Award","lg":"AL","pid":"eckerde01","t":"OAK"},{"a":"Most Valuable Player","lg":"AL","pid":"eckerde01","t":"OAK"},{"a":"Rookie of the Year","lg":"NL","pid":"karroer01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"listapa01","t":"ML4"},{"a":"Cy Young Award","lg":"NL","pid":"maddugr01","t":"CHN"}],"1993":[{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"SFN"},{"a":"Cy Young Award","lg":"NL","pid":"maddugr01","t":"ATL"},{"a":"Cy Young Award","lg":"AL","pid":"mcdowja01","t":"CHA"},{"a":"Rookie of the Year","lg":"NL","pid":"piazzmi01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"salmoti01","t":"CAL"},{"a":"Most Valuable Player","lg":"AL","pid":"thomafr04","t":"CHA"}],"2001":[{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"SFN"},{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"NYA"},{"a":"Cy Young Award","lg":"NL","pid":"johnsra05","t":"ARI"},{"a":"Rookie of the Year","lg":"NL","pid":"pujolal01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"suzukic01","t":"SEA"},{"a":"Rookie of the Year","lg":"AL","pid":"suzukic01","t":"SEA"}],"2002":[{"a":"Most Valuable Player","lg":"NL","pid":"bondsba01","t":"SFN"},{"a":"Rookie of the Year","lg":"AL","pid":"hinsker01","t":"TOR"},{"a":"Rookie of the Year","lg":"NL","pid":"jennija01","t":"COL"},{"a":"Cy Young Award","lg":"NL","pid":"johnsra05","t":"ARI"},{"a":"Most Valuable Player","lg":"AL","pid":"tejadmi01","t":"OAK"},{"a":"Cy Young Award","lg":"AL","pid":"zitoba01","t":"OAK"}],"1928":[{"a":"Most Valuable Player","lg":"NL","pid":"bottoji01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"cochrmi01","t":"PHA"}],"1948":[{"a":"Most Valuable Player","lg":"AL","pid":"boudrlo01","t":"CLE"},{"a":"Rookie of the Year","lg":"ML","pid":"darkal01","t":"BSN"},{"a":"Most Valuable Player","lg":"NL","pid":"musiast01","t":"SLN"}],"2011":[{"a":"Most Valuable Player","lg":"NL","pid":"braunry02","t":"MIL"},{"a":"Rookie of the Year","lg":"AL","pid":"hellije01","t":"TBA"},{"a":"Cy Young Award","lg":"NL","pid":"kershcl01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"kimbrcr01","t":"ATL"},{"a":"Cy Young Award","lg":"AL","pid":"verlaju01","t":"DET"},{"a":"Most Valuable Player","lg":"AL","pid":"verlaju01","t":"DET"}],"2007":[{"a":"Rookie of the Year","lg":"NL","pid":"braunry02","t":"MIL"},{"a":"Cy Young Award","lg":"NL","pid":"peavyja01","t":"SDN"},{"a":"Rookie of the Year","lg":"AL","pid":"pedrodu01","t":"BOS"},{"a":"Most Valuable Player","lg":"AL","pid":"rodrial01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"rolliji01","t":"PHI"},{"a":"Cy Young Award","lg":"AL","pid":"sabatcc01","t":"CLE"}],"1980":[{"a":"Most Valuable Player","lg":"AL","pid":"brettge01","t":"KCA"},{"a":"Cy Young Award","lg":"NL","pid":"carltst01","t":"PHI"},{"a":"Rookie of the Year","lg":"AL","pid":"charbjo01","t":"CLE"},{"a":"Rookie of the Year","lg":"NL","pid":"howest01","t":"LAN"},{"a":"Most Valuable Player","lg":"NL","pid":"schmimi01","t":"PHI"},{"a":"Cy Young Award","lg":"AL","pid":"stonest01","t":"BAL"}],"2016":[{"a":"Most Valuable Player","lg":"NL","pid":"bryankr01","t":"CHN"},{"a":"Rookie of the Year","lg":"AL","pid":"fulmemi01","t":"DET"},{"a":"Cy Young Award","lg":"AL","pid":"porceri01","t":"BOS"},{"a":"Cy Young Award","lg":"NL","pid":"scherma01","t":"WAS"},{"a":"Rookie of the Year","lg":"NL","pid":"seageco01","t":"LAN"},{"a":"Most Valuable Player","lg":"AL","pid":"troutmi01","t":"LAA"}],"1973":[{"a":"Rookie of the Year","lg":"AL","pid":"bumbral01","t":"BAL"},{"a":"Most Valuable Player","lg":"AL","pid":"jacksre01","t":"OAK"},{"a":"Rookie of the Year","lg":"NL","pid":"matthga01","t":"SFN"},{"a":"Cy Young Award","lg":"AL","pid":"palmeji01","t":"BAL"},{"a":"Most Valuable Player","lg":"NL","pid":"rosepe01","t":"CIN"},{"a":"Cy Young Award","lg":"NL","pid":"seaveto01","t":"NYN"}],"1926":[{"a":"Most Valuable Player","lg":"AL","pid":"burnsge02","t":"CLE"},{"a":"Most Valuable Player","lg":"NL","pid":"ofarrbo01","t":"SLN"}],"1974":[{"a":"Most Valuable Player","lg":"AL","pid":"burroje01","t":"TEX"},{"a":"Most Valuable Player","lg":"NL","pid":"garvest01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"hargrmi01","t":"TEX"},{"a":"Cy Young Award","lg":"AL","pid":"hunteca01","t":"OAK"},{"a":"Cy Young Award","lg":"NL","pid":"marshmi01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"mcbriba01","t":"SLN"}],"2012":[{"a":"Most Valuable Player","lg":"AL","pid":"cabremi01","t":"DET"},{"a":"Cy Young Award","lg":"NL","pid":"dickera01","t":"NYN"},{"a":"Rookie of the Year","lg":"NL","pid":"harpebr03","t":"WAS"},{"a":"Most Valuable Player","lg":"NL","pid":"poseybu01","t":"SFN"},{"a":"Cy Young Award","lg":"AL","pid":"priceda01","t":"TBA"},{"a":"Rookie of the Year","lg":"AL","pid":"troutmi01","t":"LAA"}],"2013":[{"a":"Most Valuable Player","lg":"AL","pid":"cabremi01","t":"DET"},{"a":"Rookie of the Year","lg":"NL","pid":"fernajo02","t":"MIA"},{"a":"Cy Young Award","lg":"NL","pid":"kershcl01","t":"LAN"},{"a":"Most Valuable Player","lg":"NL","pid":"mccutan01","t":"PIT"},{"a":"Rookie of the Year","lg":"AL","pid":"myerswi01","t":"TBA"},{"a":"Cy Young Award","lg":"AL","pid":"scherma01","t":"DET"}],"1941":[{"a":"Most Valuable Player","lg":"NL","pid":"camildo01","t":"BRO"},{"a":"Most Valuable Player","lg":"AL","pid":"dimagjo01","t":"NYA"}],"1996":[{"a":"Most Valuable Player","lg":"NL","pid":"caminke01","t":"SDN"},{"a":"Most Valuable Player","lg":"AL","pid":"gonzaju03","t":"TEX"},{"a":"Cy Young Award","lg":"AL","pid":"hentgpa01","t":"TOR"},{"a":"Rookie of the Year","lg":"NL","pid":"hollato01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"jeterde01","t":"NYA"},{"a":"Cy Young Award","lg":"NL","pid":"smoltjo01","t":"ATL"}],"1953":[{"a":"Most Valuable Player","lg":"NL","pid":"camparo01","t":"BRO"},{"a":"Rookie of the Year","lg":"NL","pid":"gilliji01","t":"BRO"},{"a":"Rookie of the Year","lg":"AL","pid":"kuennha01","t":"DET"},{"a":"Most Valuable Player","lg":"AL","pid":"rosenal01","t":"CLE"}],"1988":[{"a":"Most Valuable Player","lg":"AL","pid":"cansejo01","t":"OAK"},{"a":"Most Valuable Player","lg":"NL","pid":"gibsoki01","t":"LAN"},{"a":"Cy Young Award","lg":"NL","pid":"hershor01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"saboch01","t":"CIN"},{"a":"Cy Young Award","lg":"AL","pid":"violafr01","t":"MIN"},{"a":"Rookie of the Year","lg":"AL","pid":"weisswa01","t":"OAK"}],"1986":[{"a":"Rookie of the Year","lg":"AL","pid":"cansejo01","t":"OAK"},{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"BOS"},{"a":"Most Valuable Player","lg":"AL","pid":"clemero02","t":"BOS"},{"a":"Most Valuable Player","lg":"NL","pid":"schmimi01","t":"PHI"},{"a":"Cy Young Award","lg":"NL","pid":"scottmi03","t":"HOU"},{"a":"Rookie of the Year","lg":"NL","pid":"worreto01","t":"SLN"}],"1977":[{"a":"Most Valuable Player","lg":"AL","pid":"carewro01","t":"MIN"},{"a":"Cy Young Award","lg":"NL","pid":"carltst01","t":"PHI"},{"a":"Rookie of the Year","lg":"NL","pid":"dawsoan01","t":"MON"},{"a":"Most Valuable Player","lg":"NL","pid":"fostege01","t":"CIN"},{"a":"Cy Young Award","lg":"AL","pid":"lylesp01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"murraed02","t":"BAL"}],"1967":[{"a":"Rookie of the Year","lg":"AL","pid":"carewro01","t":"MIN"},{"a":"Most Valuable Player","lg":"NL","pid":"cepedor01","t":"SLN"},{"a":"Cy Young Award","lg":"AL","pid":"lonboji01","t":"BOS"},{"a":"Cy Young Award","lg":"NL","pid":"mccormi03","t":"SFN"},{"a":"Rookie of the Year","lg":"NL","pid":"seaveto01","t":"NYN"},{"a":"Most Valuable Player","lg":"AL","pid":"yastrca01","t":"BOS"}],"1982":[{"a":"Cy Young Award","lg":"NL","pid":"carltst01","t":"PHI"},{"a":"Most Valuable Player","lg":"NL","pid":"murphda05","t":"ATL"},{"a":"Rookie of the Year","lg":"AL","pid":"ripkeca01","t":"BAL"},{"a":"Rookie of the Year","lg":"NL","pid":"saxst01","t":"LAN"},{"a":"Cy Young Award","lg":"AL","pid":"vuckope01","t":"ML4"},{"a":"Most Valuable Player","lg":"AL","pid":"yountro01","t":"ML4"}],"2005":[{"a":"Cy Young Award","lg":"NL","pid":"carpech01","t":"SLN"},{"a":"Cy Young Award","lg":"AL","pid":"colonba01","t":"LAA"},{"a":"Rookie of the Year","lg":"NL","pid":"howarry01","t":"PHI"},{"a":"Most Valuable Player","lg":"NL","pid":"pujolal01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"rodrial01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"streehu01","t":"OAK"}],"1945":[{"a":"Most Valuable Player","lg":"NL","pid":"cavarph01","t":"CHN"},{"a":"Most Valuable Player","lg":"AL","pid":"newhoha01","t":"DET"}],"1943":[{"a":"Most Valuable Player","lg":"AL","pid":"chandsp01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"musiast01","t":"SLN"}],"1997":[{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"TOR"},{"a":"Rookie of the Year","lg":"AL","pid":"garcino01","t":"BOS"},{"a":"Most Valuable Player","lg":"AL","pid":"griffke02","t":"SEA"},{"a":"Cy Young Award","lg":"NL","pid":"martipe02","t":"MON"},{"a":"Rookie of the Year","lg":"NL","pid":"rolensc01","t":"PHI"},{"a":"Most Valuable Player","lg":"NL","pid":"walkela01","t":"COL"}],"1998":[{"a":"Cy Young Award","lg":"AL","pid":"clemero02","t":"TOR"},{"a":"Cy Young Award","lg":"NL","pid":"glavito02","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"gonzaju03","t":"TEX"},{"a":"Rookie of the Year","lg":"AL","pid":"grievbe01","t":"OAK"},{"a":"Most Valuable Player","lg":"NL","pid":"sosasa01","t":"CHN"},{"a":"Rookie of the Year","lg":"NL","pid":"woodke02","t":"CHN"}],"1911":[{"a":"Most Valuable Player","lg":"AL","pid":"cobbty01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"schulfr01","t":"CHN"}],"1934":[{"a":"Most Valuable Player","lg":"AL","pid":"cochrmi01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"deandi01","t":"SLN"}],"1985":[{"a":"Rookie of the Year","lg":"NL","pid":"colemvi01","t":"SLN"},{"a":"Cy Young Award","lg":"NL","pid":"goodedw01","t":"NYN"},{"a":"Rookie of the Year","lg":"AL","pid":"guilloz01","t":"CHA"},{"a":"Most Valuable Player","lg":"AL","pid":"mattido01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"mcgeewi01","t":"SLN"},{"a":"Cy Young Award","lg":"AL","pid":"saberbr01","t":"KCA"}],"1914":[{"a":"Most Valuable Player","lg":"AL","pid":"collied01","t":"PHA"},{"a":"Most Valuable Player","lg":"NL","pid":"eversjo01","t":"BSN"}],"1942":[{"a":"Most Valuable Player","lg":"NL","pid":"coopemo01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"gordojo01","t":"NYA"}],"1995":[{"a":"Rookie of the Year","lg":"AL","pid":"cordoma01","t":"MIN"},{"a":"Cy Young Award","lg":"AL","pid":"johnsra05","t":"SEA"},{"a":"Most Valuable Player","lg":"NL","pid":"larkiba01","t":"CIN"},{"a":"Cy Young Award","lg":"NL","pid":"maddugr01","t":"ATL"},{"a":"Rookie of the Year","lg":"NL","pid":"nomohi01","t":"LAN"},{"a":"Most Valuable Player","lg":"AL","pid":"vaughmo01","t":"BOS"}],"1969":[{"a":"Cy Young Award","lg":"AL","pid":"cuellmi01","t":"BAL"},{"a":"Most Valuable Player","lg":"AL","pid":"killeha01","t":"MIN"},{"a":"Most Valuable Player","lg":"NL","pid":"mccovwi01","t":"SFN"},{"a":"Cy Young Award","lg":"AL","pid":"mclaide01","t":"DET"},{"a":"Rookie of the Year","lg":"AL","pid":"pinielo01","t":"KCA"},{"a":"Cy Young Award","lg":"NL","pid":"seaveto01","t":"NYN"},{"a":"Rookie of the Year","lg":"NL","pid":"sizemte01","t":"LAN"}],"1913":[{"a":"Most Valuable Player","lg":"NL","pid":"daubeja01","t":"BRO"},{"a":"Most Valuable Player","lg":"AL","pid":"johnswa01","t":"WS1"}],"1984":[{"a":"Rookie of the Year","lg":"AL","pid":"davisal01","t":"SEA"},{"a":"Rookie of the Year","lg":"NL","pid":"goodedw01","t":"NYN"},{"a":"Cy Young Award","lg":"AL","pid":"hernawi01","t":"DET"},{"a":"Most Valuable Player","lg":"AL","pid":"hernawi01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"sandbry01","t":"CHN"},{"a":"Cy Young Award","lg":"NL","pid":"sutclri01","t":"CHN"}],"1989":[{"a":"Cy Young Award","lg":"NL","pid":"davisma01","t":"SDN"},{"a":"Most Valuable Player","lg":"NL","pid":"mitchke01","t":"SFN"},{"a":"Rookie of the Year","lg":"AL","pid":"olsongr01","t":"BAL"},{"a":"Cy Young Award","lg":"AL","pid":"saberbr01","t":"KCA"},{"a":"Rookie of the Year","lg":"NL","pid":"waltoje01","t":"CHN"},{"a":"Most Valuable Player","lg":"AL","pid":"yountro01","t":"ML4"}],"1983":[{"a":"Cy Young Award","lg":"NL","pid":"dennyjo01","t":"PHI"},{"a":"Cy Young Award","lg":"AL","pid":"hoytla01","t":"CHA"},{"a":"Rookie of the Year","lg":"AL","pid":"kittlro01","t":"CHA"},{"a":"Most Valuable Player","lg":"NL","pid":"murphda05","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"ripkeca01","t":"BAL"},{"a":"Rookie of the Year","lg":"NL","pid":"strawda01","t":"NYN"}],"1939":[{"a":"Most Valuable Player","lg":"AL","pid":"dimagjo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"waltebu01","t":"CIN"}],"1947":[{"a":"Most Valuable Player","lg":"AL","pid":"dimagjo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"elliobo01","t":"BSN"},{"a":"Rookie of the Year","lg":"ML","pid":"robinja02","t":"BRO"}],"1912":[{"a":"Most Valuable Player","lg":"NL","pid":"doylela01","t":"NY1"},{"a":"Most Valuable Player","lg":"AL","pid":"speaktr01","t":"BOS"}],"1950":[{"a":"Rookie of the Year","lg":"AL","pid":"dropowa01","t":"BOS"},{"a":"Rookie of the Year","lg":"NL","pid":"jethrsa01","t":"BSN"},{"a":"Most Valuable Player","lg":"NL","pid":"konstji01","t":"PHI"},{"a":"Most Valuable Player","lg":"AL","pid":"rizzuph01","t":"NYA"}],"1962":[{"a":"Cy Young Award","lg":"ML","pid":"drysddo01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"hubbske01","t":"CHN"},{"a":"Most Valuable Player","lg":"AL","pid":"mantlmi01","t":"NYA"},{"a":"Rookie of the Year","lg":"AL","pid":"treshto01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"willsma01","t":"LAN"}],"2010":[{"a":"Rookie of the Year","lg":"AL","pid":"felizne01","t":"TEX"},{"a":"Cy Young Award","lg":"NL","pid":"hallaro01","t":"PHI"},{"a":"Most Valuable Player","lg":"AL","pid":"hamiljo03","t":"TEX"},{"a":"Cy Young Award","lg":"AL","pid":"hernafe02","t":"SEA"},{"a":"Rookie of the Year","lg":"NL","pid":"poseybu01","t":"SFN"},{"a":"Most Valuable Player","lg":"NL","pid":"vottojo01","t":"CIN"}],"1976":[{"a":"Rookie of the Year","lg":"AL","pid":"fidryma01","t":"DET"},{"a":"Cy Young Award","lg":"NL","pid":"jonesra01","t":"SDN"},{"a":"Rookie of the Year","lg":"NL","pid":"metzgbu01","t":"SDN"},{"a":"Most Valuable Player","lg":"NL","pid":"morgajo02","t":"CIN"},{"a":"Most Valuable Player","lg":"AL","pid":"munsoth01","t":"NYA"},{"a":"Cy Young Award","lg":"AL","pid":"palmeji01","t":"BAL"},{"a":"Rookie of the Year","lg":"NL","pid":"zachrpa01","t":"CIN"}],"1981":[{"a":"Cy Young Award","lg":"AL","pid":"fingero01","t":"ML4"},{"a":"Most Valuable Player","lg":"AL","pid":"fingero01","t":"ML4"},{"a":"Rookie of the Year","lg":"AL","pid":"righeda01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"schmimi01","t":"PHI"},{"a":"Cy Young Award","lg":"NL","pid":"valenfe01","t":"LAN"},{"a":"Rookie of the Year","lg":"NL","pid":"valenfe01","t":"LAN"}],"1961":[{"a":"Cy Young Award","lg":"ML","pid":"fordwh01","t":"NYA"},{"a":"Most Valuable Player","lg":"AL","pid":"marisro01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"robinfr02","t":"CIN"},{"a":"Rookie of the Year","lg":"AL","pid":"schwado01","t":"BOS"},{"a":"Rookie of the Year","lg":"NL","pid":"willibi01","t":"CHN"}],"1932":[{"a":"Most Valuable Player","lg":"AL","pid":"foxxji01","t":"PHA"},{"a":"Most Valuable Player","lg":"NL","pid":"kleinch01","t":"PHI"}],"1933":[{"a":"Most Valuable Player","lg":"AL","pid":"foxxji01","t":"PHA"},{"a":"Most Valuable Player","lg":"NL","pid":"hubbeca01","t":"NY1"}],"1938":[{"a":"Most Valuable Player","lg":"AL","pid":"foxxji01","t":"BOS"},{"a":"Most Valuable Player","lg":"NL","pid":"lombaer01","t":"CIN"}],"1931":[{"a":"Most Valuable Player","lg":"NL","pid":"friscfr01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"grovele01","t":"PHA"}],"2000":[{"a":"Rookie of the Year","lg":"NL","pid":"furcara01","t":"ATL"},{"a":"Most Valuable Player","lg":"AL","pid":"giambja01","t":"OAK"},{"a":"Cy Young Award","lg":"NL","pid":"johnsra05","t":"ARI"},{"a":"Most Valuable Player","lg":"NL","pid":"kentje01","t":"SFN"},{"a":"Cy Young Award","lg":"AL","pid":"martipe02","t":"BOS"},{"a":"Rookie of the Year","lg":"AL","pid":"sasakka01","t":"SEA"}],"1937":[{"a":"Most Valuable Player","lg":"AL","pid":"gehrich01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"medwijo01","t":"SLN"}],"1927":[{"a":"Most Valuable Player","lg":"AL","pid":"gehrilo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"wanerpa01","t":"PIT"}],"1936":[{"a":"Most Valuable Player","lg":"AL","pid":"gehrilo01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"hubbeca01","t":"NY1"}],"2024":[{"a":"Rookie of the Year","lg":"AL","pid":"gillu01","t":"NYA"},{"a":"Most Valuable Player","lg":"AL","pid":"judgeaa01","t":"NYA"},{"a":"Most Valuable Player","lg":"NL","pid":"ohtansh01","t":"LAN"},{"a":"Cy Young Award","lg":"NL","pid":"salech01","t":"ATL"},{"a":"Rookie of the Year","lg":"NL","pid":"skenepa01","t":"PIT"},{"a":"Cy Young Award","lg":"AL","pid":"skubata01","t":"DET"}],"1935":[{"a":"Most Valuable Player","lg":"AL","pid":"greenha01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"hartnga01","t":"CHN"}],"1940":[{"a":"Most Valuable Player","lg":"AL","pid":"greenha01","t":"DET"},{"a":"Most Valuable Player","lg":"NL","pid":"mccorfr01","t":"CIN"}],"1960":[{"a":"Most Valuable Player","lg":"NL","pid":"groatdi01","t":"PIT"},{"a":"Rookie of the Year","lg":"AL","pid":"hansero02","t":"BAL"},{"a":"Rookie of the Year","lg":"NL","pid":"howarfr01","t":"LAN"},{"a":"Cy Young Award","lg":"ML","pid":"lawve01","t":"PIT"},{"a":"Most Valuable Player","lg":"AL","pid":"marisro01","t":"NYA"}],"1978":[{"a":"Cy Young Award","lg":"AL","pid":"guidrro01","t":"NYA"},{"a":"Rookie of the Year","lg":"NL","pid":"hornebo01","t":"ATL"},{"a":"Most Valuable Player","lg":"NL","pid":"parkeda01","t":"PIT"},{"a":"Cy Young Award","lg":"NL","pid":"perryga01","t":"SDN"},{"a":"Most Valuable Player","lg":"AL","pid":"riceji01","t":"BOS"},{"a":"Rookie of the Year","lg":"AL","pid":"whitalo01","t":"DET"}],"1925":[{"a":"Most Valuable Player","lg":"NL","pid":"hornsro01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"peckiro01","t":"WS1"}],"1929":[{"a":"Most Valuable Player","lg":"NL","pid":"hornsro01","t":"CHN"}],"1963":[{"a":"Most Valuable Player","lg":"AL","pid":"howarel01","t":"NYA"},{"a":"Cy Young Award","lg":"ML","pid":"koufasa01","t":"LAN"},{"a":"Most Valuable Player","lg":"NL","pid":"koufasa01","t":"LAN"},{"a":"Rookie of the Year","lg":"AL","pid":"peterga01","t":"CHA"},{"a":"Rookie of the Year","lg":"NL","pid":"rosepe01","t":"CIN"}],"2006":[{"a":"Most Valuable Player","lg":"NL","pid":"howarry01","t":"PHI"},{"a":"Most Valuable Player","lg":"AL","pid":"morneju01","t":"MIN"},{"a":"Rookie of the Year","lg":"NL","pid":"ramirha01","t":"FLO"},{"a":"Cy Young Award","lg":"AL","pid":"santajo01","t":"MIN"},{"a":"Rookie of the Year","lg":"AL","pid":"verlaju01","t":"DET"},{"a":"Cy Young Award","lg":"NL","pid":"webbbr01","t":"ARI"}],"1924":[{"a":"Most Valuable Player","lg":"AL","pid":"johnswa01","t":"WS1"},{"a":"Most Valuable Player","lg":"NL","pid":"vanceda01","t":"BRO"}],"2008":[{"a":"Cy Young Award","lg":"AL","pid":"leecl02","t":"CLE"},{"a":"Cy Young Award","lg":"NL","pid":"linceti01","t":"SFN"},{"a":"Rookie of the Year","lg":"AL","pid":"longoev01","t":"TBA"},{"a":"Most Valuable Player","lg":"AL","pid":"pedrodu01","t":"BOS"},{"a":"Most Valuable Player","lg":"NL","pid":"pujolal01","t":"SLN"},{"a":"Rookie of the Year","lg":"NL","pid":"sotoge01","t":"CHN"}],"1975":[{"a":"Most Valuable Player","lg":"AL","pid":"lynnfr01","t":"BOS"},{"a":"Rookie of the Year","lg":"AL","pid":"lynnfr01","t":"BOS"},{"a":"Rookie of the Year","lg":"NL","pid":"montejo01","t":"SFN"},{"a":"Most Valuable Player","lg":"NL","pid":"morgajo02","t":"CIN"},{"a":"Cy Young Award","lg":"AL","pid":"palmeji01","t":"BAL"},{"a":"Cy Young Award","lg":"NL","pid":"seaveto01","t":"NYN"}],"1944":[{"a":"Most Valuable Player","lg":"NL","pid":"marioma01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"newhoha01","t":"DET"}],"1946":[{"a":"Most Valuable Player","lg":"NL","pid":"musiast01","t":"SLN"},{"a":"Most Valuable Player","lg":"AL","pid":"willite01","t":"BOS"}],"1949":[{"a":"Rookie of the Year","lg":"NL","pid":"newcodo01","t":"BRO"},{"a":"Most Valuable Player","lg":"NL","pid":"robinja02","t":"BRO"},{"a":"Rookie of the Year","lg":"AL","pid":"sievero01","t":"SLA"},{"a":"Most Valuable Player","lg":"AL","pid":"willite01","t":"BOS"}],"1923":[{"a":"Most Valuable Player","lg":"AL","pid":"ruthba01","t":"NYA"}],"1922":[{"a":"Most Valuable Player","lg":"AL","pid":"sislege01","t":"SLA"}]};
 const WS={"1884":{"w":"PRO","l":"NY4","wins":"3","losses":"0"},"1885":{"w":"CHN","l":"SL4","wins":"3","losses":"3"},"1886":{"w":"SL4","l":"CHN","wins":"4","losses":"2"},"1887":{"w":"DTN","l":"SL4","wins":"10","losses":"5"},"1888":{"w":"NY1","l":"SL4","wins":"6","losses":"4"},"1889":{"w":"NY1","l":"BR3","wins":"6","losses":"3"},"1890":{"w":"BRO","l":"LS2","wins":"3","losses":"3"},"1903":{"w":"BOS","l":"PIT","wins":"5","losses":"3"},"1905":{"w":"NY1","l":"PHA","wins":"4","losses":"1"},"1906":{"w":"CHA","l":"CHN","wins":"4","losses":"2"},"1907":{"w":"CHN","l":"DET","wins":"4","losses":"0"},"1908":{"w":"CHN","l":"DET","wins":"4","losses":"1"},"1909":{"w":"PIT","l":"DET","wins":"4","losses":"3"},"1910":{"w":"PHA","l":"CHN","wins":"4","losses":"1"},"1911":{"w":"PHA","l":"NY1","wins":"4","losses":"2"},"1912":{"w":"BOS","l":"NY1","wins":"4","losses":"3"},"1913":{"w":"PHA","l":"NY1","wins":"4","losses":"1"},"1914":{"w":"BSN","l":"PHA","wins":"4","losses":"0"},"1915":{"w":"BOS","l":"PHI","wins":"4","losses":"1"},"1916":{"w":"BOS","l":"BRO","wins":"4","losses":"1"},"1917":{"w":"CHA","l":"NY1","wins":"4","losses":"2"},"1918":{"w":"BOS","l":"CHN","wins":"4","losses":"2"},"1919":{"w":"CIN","l":"CHA","wins":"5","losses":"3"},"1920":{"w":"CLE","l":"BRO","wins":"5","losses":"2"},"1921":{"w":"NY1","l":"NYA","wins":"5","losses":"3"},"1922":{"w":"NY1","l":"NYA","wins":"4","losses":"0"},"1923":{"w":"NYA","l":"NY1","wins":"4","losses":"2"},"1924":{"w":"WS1","l":"NY1","wins":"4","losses":"3"},"1925":{"w":"PIT","l":"WS1","wins":"4","losses":"3"},"1926":{"w":"SLN","l":"NYA","wins":"4","losses":"3"},"1927":{"w":"NYA","l":"PIT","wins":"4","losses":"0"},"1928":{"w":"NYA","l":"SLN","wins":"4","losses":"0"},"1929":{"w":"PHA","l":"CHN","wins":"4","losses":"1"},"1930":{"w":"PHA","l":"SLN","wins":"4","losses":"2"},"1931":{"w":"SLN","l":"PHA","wins":"4","losses":"3"},"1932":{"w":"NYA","l":"CHN","wins":"4","losses":"0"},"1933":{"w":"NY1","l":"WS1","wins":"4","losses":"1"},"1934":{"w":"SLN","l":"DET","wins":"4","losses":"3"},"1935":{"w":"DET","l":"CHN","wins":"4","losses":"2"},"1936":{"w":"NYA","l":"NY1","wins":"4","losses":"2"},"1937":{"w":"NYA","l":"NY1","wins":"4","losses":"1"},"1938":{"w":"NYA","l":"CHN","wins":"4","losses":"0"},"1939":{"w":"NYA","l":"CIN","wins":"4","losses":"0"},"1940":{"w":"CIN","l":"DET","wins":"4","losses":"3"},"1941":{"w":"NYA","l":"BRO","wins":"4","losses":"1"},"1942":{"w":"SLN","l":"NYA","wins":"4","losses":"1"},"1943":{"w":"NYA","l":"SLN","wins":"4","losses":"1"},"1944":{"w":"SLN","l":"SLA","wins":"4","losses":"2"},"1945":{"w":"DET","l":"CHN","wins":"4","losses":"3"},"1946":{"w":"SLN","l":"BOS","wins":"4","losses":"3"},"1947":{"w":"NYA","l":"BRO","wins":"4","losses":"3"},"1948":{"w":"CLE","l":"BSN","wins":"4","losses":"2"},"1949":{"w":"NYA","l":"BRO","wins":"4","losses":"1"},"1950":{"w":"NYA","l":"PHI","wins":"4","losses":"0"},"1951":{"w":"NYA","l":"NY1","wins":"4","losses":"2"},"1952":{"w":"NYA","l":"BRO","wins":"4","losses":"3"},"1953":{"w":"NYA","l":"BRO","wins":"4","losses":"2"},"1954":{"w":"NY1","l":"CLE","wins":"4","losses":"0"},"1955":{"w":"BRO","l":"NYA","wins":"4","losses":"3"},"1956":{"w":"NYA","l":"BRO","wins":"4","losses":"3"},"1957":{"w":"ML1","l":"NYA","wins":"4","losses":"3"},"1958":{"w":"NYA","l":"ML1","wins":"4","losses":"3"},"1959":{"w":"LAN","l":"CHA","wins":"4","losses":"2"},"1960":{"w":"PIT","l":"NYA","wins":"4","losses":"3"},"1961":{"w":"NYA","l":"CIN","wins":"4","losses":"1"},"1962":{"w":"NYA","l":"SFN","wins":"4","losses":"3"},"1963":{"w":"LAN","l":"NYA","wins":"4","losses":"0"},"1964":{"w":"SLN","l":"NYA","wins":"4","losses":"3"},"1965":{"w":"LAN","l":"MIN","wins":"4","losses":"3"},"1966":{"w":"BAL","l":"LAN","wins":"4","losses":"0"},"1967":{"w":"SLN","l":"BOS","wins":"4","losses":"3"},"1968":{"w":"DET","l":"SLN","wins":"4","losses":"3"},"1969":{"w":"NYN","l":"BAL","wins":"4","losses":"1"},"1970":{"w":"BAL","l":"CIN","wins":"4","losses":"1"},"1971":{"w":"PIT","l":"BAL","wins":"4","losses":"3"},"1972":{"w":"OAK","l":"CIN","wins":"4","losses":"3"},"1973":{"w":"OAK","l":"NYN","wins":"4","losses":"3"},"1974":{"w":"OAK","l":"LAN","wins":"4","losses":"1"},"1975":{"w":"CIN","l":"BOS","wins":"4","losses":"3"},"1976":{"w":"CIN","l":"NYA","wins":"4","losses":"0"},"1977":{"w":"NYA","l":"LAN","wins":"4","losses":"2"},"1978":{"w":"NYA","l":"LAN","wins":"4","losses":"2"},"1979":{"w":"PIT","l":"BAL","wins":"4","losses":"3"},"1980":{"w":"PHI","l":"KCA","wins":"4","losses":"2"},"1981":{"w":"LAN","l":"NYA","wins":"4","losses":"2"},"1982":{"w":"SLN","l":"ML4","wins":"4","losses":"3"},"1983":{"w":"BAL","l":"PHI","wins":"4","losses":"1"},"1984":{"w":"DET","l":"SDN","wins":"4","losses":"1"},"1985":{"w":"KCA","l":"SLN","wins":"4","losses":"3"},"1986":{"w":"NYN","l":"BOS","wins":"4","losses":"3"},"1987":{"w":"MIN","l":"SLN","wins":"4","losses":"3"},"1988":{"w":"LAN","l":"OAK","wins":"4","losses":"1"},"1989":{"w":"OAK","l":"SFN","wins":"4","losses":"0"},"1990":{"w":"CIN","l":"OAK","wins":"4","losses":"0"},"1991":{"w":"MIN","l":"ATL","wins":"4","losses":"3"},"1992":{"w":"TOR","l":"ATL","wins":"4","losses":"2"},"1993":{"w":"TOR","l":"PHI","wins":"4","losses":"2"},"1995":{"w":"ATL","l":"CLE","wins":"4","losses":"2"},"1996":{"w":"NYA","l":"ATL","wins":"4","losses":"2"},"1997":{"w":"FLO","l":"CLE","wins":"4","losses":"3"},"1998":{"w":"NYA","l":"SDN","wins":"4","losses":"0"},"1999":{"w":"NYA","l":"ATL","wins":"4","losses":"0"},"2000":{"w":"NYA","l":"NYN","wins":"4","losses":"1"},"2001":{"w":"ARI","l":"NYA","wins":"4","losses":"3"},"2002":{"w":"ANA","l":"SFN","wins":"4","losses":"3"},"2003":{"w":"FLO","l":"NYA","wins":"4","losses":"2"},"2004":{"w":"BOS","l":"SLN","wins":"4","losses":"0"},"2005":{"w":"CHA","l":"HOU","wins":"4","losses":"0"},"2006":{"w":"SLN","l":"DET","wins":"4","losses":"1"},"2007":{"w":"BOS","l":"COL","wins":"4","losses":"0"},"2008":{"w":"PHI","l":"TBA","wins":"4","losses":"1"},"2009":{"w":"NYA","l":"PHI","wins":"4","losses":"2"},"2010":{"w":"SFN","l":"TEX","wins":"4","losses":"1"},"2011":{"w":"SLN","l":"TEX","wins":"4","losses":"3"},"2012":{"w":"SFN","l":"DET","wins":"4","losses":"0"},"2013":{"w":"BOS","l":"SLN","wins":"4","losses":"3"},"2014":{"w":"SFN","l":"KCA","wins":"4","losses":"3"},"2015":{"w":"KCA","l":"NYN","wins":"4","losses":"1"},"2016":{"w":"CHN","l":"CLE","wins":"4","losses":"3"},"2017":{"w":"HOU","l":"LAN","wins":"4","losses":"3"},"2018":{"w":"BOS","l":"LAN","wins":"4","losses":"1"},"2019":{"w":"WAS","l":"HOU","wins":"4","losses":"3"},"2020":{"w":"LAN","l":"TBA","wins":"4","losses":"2"},"2021":{"w":"ATL","l":"HOU","wins":"4","losses":"2"},"2022":{"w":"HOU","l":"PHI","wins":"4","losses":"2"},"2023":{"w":"TEX","l":"ARI","wins":"4","losses":"1"},"2024":{"w":"LAN","l":"NYA","wins":"4","losses":"1"},"2025":{"w":"LAN","l":"TOR","wins":"4","losses":"3"}};
 
+// Lahman team ID -> display franchise code
+const FCODE={
+  NYA:'NYY',BOS:'BOS',PHI:'PHI',CHN:'CHC',CHA:'CWS',ATL:'ATL',
+  LAN:'LAD',SFN:'SFG',SLN:'STL',CIN:'CIN',PIT:'PIT',HOU:'HOU',
+  OAK:'OAK',MIN:'MIN',DET:'DET',BAL:'BAL',SEA:'SEA',TEX:'TEX',
+  TOR:'TOR',NYN:'NYM',SDN:'SDP',COL:'COL',ARI:'ARI',KCA:'KCR',
+  WAS:'WSH',MIL:'MIL',MIA:'MIA',FLO:'FLA',ANA:'ANA',LAA:'LAA',
+  CAL:'CAL',MON:'MON',CLE:'CLE',TBA:'TBR',ATH:'ATH',
+  ML4:'MIL',ML1:'MLN',BSN:'BSN',BRO:'BRO',NY1:'NYG',
+  SLA:'SLB',PHA:'PHA',WS1:'WSH',WS2:'WSH',SE1:'SEP',KC1:'KCA',
+};
+function fcode(t){ return FCODE[t]||t; }
+
+// Year-aware full team names for WS display
 const TEAM_NAMES={
   NYA:[[9999,'New York Yankees']],BOS:[[9999,'Boston Red Sox']],
   PHI:[[9999,'Philadelphia Phillies']],CHN:[[9999,'Chicago Cubs']],
@@ -183,18 +214,16 @@ const TEAM_NAMES={
   MIA:[[9999,'Miami Marlins']],FLO:[[9999,'Florida Marlins']],
   ANA:[[9999,'Anaheim Angels']],LAA:[[9999,'Los Angeles Angels']],
   CAL:[[9999,'California Angels']],MON:[[9999,'Montreal Expos']],
-  TBA:[[2008,'Tampa Bay Devil Rays'],[9999,'Tampa Bay Rays']],
   CLE:[[2022,'Cleveland Indians'],[9999,'Cleveland Guardians']],
+  TBA:[[2008,'Tampa Bay Devil Rays'],[9999,'Tampa Bay Rays']],
   ML4:[[9999,'Milwaukee Braves']],BSN:[[9999,'Boston Braves']],
   BRO:[[9999,'Brooklyn Dodgers']],NY1:[[9999,'New York Giants']],
   SLA:[[9999,'St. Louis Browns']],PHA:[[9999,'Philadelphia Athletics']],
-  WS1:[[9999,'Washington Senators']],WS2:[[9999,'Washington Senators']],
-  WS3:[[9999,'Washington Senators']],SE1:[[9999,'Seattle Pilots']],
-  KC1:[[9999,'Kansas City Athletics']],PRO:[[9999,'Providence Grays']],
-  DTN:[[9999,'Detroit Wolverines']],BR3:[[9999,'Brooklyn Bridegrooms']],
-  CL4:[[9999,'Cleveland Spiders']],LOU:[[9999,'Louisville Colonels']],
+  WS1:[[9999,'Washington Senators']],SE1:[[9999,'Seattle Pilots']],
+  PRO:[[9999,'Providence Grays']],DTN:[[9999,'Detroit Wolverines']],
+  BR3:[[9999,'Brooklyn Bridegrooms']],CL4:[[9999,'Cleveland Spiders']],
+  ATH:[[9999,'Oakland Athletics']],
 };
-
 function teamName(id,year){
   const e=TEAM_NAMES[id];
   if(!e) return id;
@@ -205,9 +234,8 @@ function teamName(id,year){
 const PID_NAME={};
 DB.forEach(r=>{if(r.id) PID_NAME[r.id]=r.n;});
 
-// Active player = no finalGame AND debut year >= 2010
-// This excludes historical Negro Leagues entries and retired players not yet updated in Lahman
-const ACTIVE_DEBUT_CUTOFF = 2010;
+const ACTIVE_DEBUT_CUTOFF=2010;
+function isActive(r){ return !r.f && parseInt(r.d)>=ACTIVE_DEBUT_CUTOFF; }
 
 function toDate(iso){return new Date(iso+'T12:00:00')}
 function diffDays(a,b){return Math.round((toDate(b)-toDate(a))/86400000)}
@@ -267,9 +295,6 @@ function run(){
 
   const allPlayers=DB.filter(r=>r.d);
 
-  // Active = no finalGame + debut >= 2010
-  function isActive(r){ return !r.f && parseInt(r.d)>=ACTIVE_DEBUT_CUTOFF; }
-
   // PLAYERS
   const pYounger=allPlayers.filter(r=>r.b>val).sort((a,b)=>a.d.localeCompare(b.d));
   const pOlderDebut=allPlayers.filter(r=>r.b<val).sort((a,b)=>b.d.localeCompare(a.d));
@@ -292,8 +317,7 @@ function run(){
       'players born before you are still playing<br>as of the 2025 season');
   } else if(pActiveOlder.length>0){
     const names=pActiveOlder.sort((a,b)=>a.b.localeCompare(b.b)).map(r=>r.n).join(', ');
-    const pOlderFinal=allPlayers.filter(r=>r.b<val&&r.f).sort((a,b)=>b.f.localeCompare(a.f));
-    const r=pOlderFinal[0];
+    const r=allPlayers.filter(x=>x.b<val&&x.f).sort((a,b)=>b.f.localeCompare(a.f))[0];
     if(r){
       const days=diffDays(r.b,val);
       olderFinalCard=bcard('older','','Last player older than you',r.n,
@@ -302,12 +326,9 @@ function run(){
         'Still active: '+names+'<br>'+
         '<span style="color:var(--older)">'+diffLabel(days)+' than you</span>'
       );
-    } else {
-      olderFinalCard=emptyBcard('older','','Last player older than you');
-    }
+    } else { olderFinalCard=emptyBcard('older','','Last player older than you'); }
   } else {
-    const pOlderFinal=allPlayers.filter(r=>r.b<val&&r.f).sort((a,b)=>b.f.localeCompare(a.f));
-    const r=pOlderFinal[0]||null;
+    const r=allPlayers.filter(x=>x.b<val&&x.f).sort((a,b)=>b.f.localeCompare(a.f))[0]||null;
     if(r){
       const days=diffDays(r.b,val);
       olderFinalCard=bcard('older','','Last player older than you',r.n,
@@ -315,9 +336,7 @@ function run(){
         'Final game: <strong>'+fmtDate(r.f)+'</strong> (age '+ageAt(r.b,r.f)+')<br>'+
         '<span style="color:var(--older)">'+diffLabel(days)+' than you</span>'
       );
-    } else {
-      olderFinalCard=emptyBcard('older','','Last player older than you');
-    }
+    } else { olderFinalCard=emptyBcard('older','','Last player older than you'); }
   }
 
   document.getElementById('player-boundary').innerHTML=
@@ -333,23 +352,16 @@ function run(){
   }).join('');
 
   // MANAGERS
-  // "First manager younger than you" = always just the one with earliest mf, no count logic
   const allMgrs=DB.filter(r=>r.m);
-  const mYounger=allMgrs.filter(r=>r.b>val).sort((a,b)=>a.mf-b.mf);
-  const ry=mYounger[0]||null;
+  const ry=allMgrs.filter(r=>r.b>val).sort((a,b)=>a.mf-b.mf)[0]||null;
   let mYoungerCard;
   if(ry){
     const days=diffDays(ry.b,val);
     mYoungerCard=bcard('younger','mgr-c','First manager younger than you',ry.n,
-      'Born '+fmtDate(ry.b)+'<br>'+
-      'First managed: <strong>'+ry.mf+'</strong><br>'+
-      '<span style="color:var(--younger)">'+diffLabel(days)+' than you</span>'
-    );
-  } else {
-    mYoungerCard=emptyBcard('younger','mgr-c','First manager younger than you');
-  }
+      'Born '+fmtDate(ry.b)+'<br>First managed: <strong>'+ry.mf+'</strong><br>'+
+      '<span style="color:var(--younger)">'+diffLabel(days)+' than you</span>');
+  } else { mYoungerCard=emptyBcard('younger','mgr-c','First manager younger than you'); }
 
-  // "Last manager older than you" = active if 4+, else named or last by final year
   const mActiveOlder=allMgrs.filter(r=>r.b<val&&r.ml>=2025);
   let mOlderCard;
   if(mActiveOlder.length>=4){
@@ -358,7 +370,7 @@ function run(){
       'managers born before you managed in 2025');
   } else if(mActiveOlder.length>0){
     const names=mActiveOlder.sort((a,b)=>a.b.localeCompare(b.b)).map(r=>r.n).join(', ');
-    mOlderCard=`<div class="bcard older mgr-c"><div class="bcard-label" style="color:var(--mgr)">Last manager older than you</div><div class="bcard-name" style="font-size:1.1rem">${names}</div><div class="bcard-detail">Still managing in 2025</div></div>`;
+    mOlderCard=`<div class="bcard older mgr-c"><div class="bcard-label" style="color:var(--mgr)">Last manager older than you</div><div class="bcard-name" style="font-size:1.1rem;line-height:1.2">${names}</div><div class="bcard-detail">Still managing in 2025</div></div>`;
   } else {
     const mOlderArr=allMgrs.filter(r=>r.b<val).sort((a,b)=>b.ml-a.ml);
     const r=mOlderArr[0]||null;
@@ -369,13 +381,9 @@ function run(){
       if(tied.length>3) tiedNote='<br><span style="color:var(--mgr)">'+tied.length+' managers tied at '+r.ml+'</span>';
       else if(tied.length>1) tiedNote='<br><span style="color:var(--mgr)">Also: '+tied.slice(1).map(x=>x.n).join(', ')+'</span>';
       mOlderCard=bcard('older','mgr-c','Last manager older than you',r.n,
-        'Born '+fmtDate(r.b)+'<br>'+
-        'Last managed: <strong>'+r.ml+'</strong>'+tiedNote+'<br>'+
-        '<span style="color:var(--older)">'+diffLabel(days)+' than you</span>'
-      );
-    } else {
-      mOlderCard=emptyBcard('older','mgr-c','Last manager older than you');
-    }
+        'Born '+fmtDate(r.b)+'<br>Last managed: <strong>'+r.ml+'</strong>'+tiedNote+'<br>'+
+        '<span style="color:var(--older)">'+diffLabel(days)+' than you</span>');
+    } else { mOlderCard=emptyBcard('older','mgr-c','Last manager older than you'); }
   }
 
   document.getElementById('mgr-boundary').innerHTML=mYoungerCard+mOlderCard;
@@ -397,8 +405,7 @@ function run(){
     return bcard(cls,'hof-c',label,r.n,
       '<strong>'+r.p+'</strong> &nbsp;|&nbsp; Born '+fmtDate(r.b)+'<br>'+
       'Class of <strong>'+r.h+'</strong><br>'+
-      '<span style="color:'+(days>=0?'var(--older)':'var(--younger)')+'">'+diffLabel(days)+' than you</span>'
-    );
+      '<span style="color:'+(days>=0?'var(--older)':'var(--younger)')+'">'+diffLabel(days)+' than you</span>');
   }
   document.getElementById('hof-boundary').innerHTML=
     hofCard(hYounger[0]||null,'younger','First HOFer younger than you')+
@@ -411,16 +418,28 @@ function run(){
     return `<tr><td>${i+1}</td><td class="pname">${r.n}<span class="pos-badge">${r.p}</span></td><td class="pdob">Class of ${r.h}</td><td class="pdiff ${diffCls(days)}">${diffLabel(days)}</td></tr>`;
   }).join('');
 
-  // TOP WAR
+  // TOP WAR SPLIT TABLE
   const birthYear=val.slice(0,4);
-  const draftClass=allPlayers.filter(r=>r.b.startsWith(birthYear)).sort((a,b)=>b.w-a.w);
-  document.getElementById('draft-title').textContent='Top WAR, '+birthYear+' Births';
-  document.getElementById('draft-meta').textContent=draftClass.length+' MLB players born this year';
-  document.getElementById('draft-top10').innerHTML=draftClass.slice(0,10).map((r,i)=>{
-    const career=r.d?r.d.slice(0,4)+'\u2013'+(r.f?r.f.slice(0,4):'pres.'):'?';
-    const days=diffDays(r.b,val);
-    return `<tr><td>${i+1}</td><td class="pname">${r.n}${hofStar(r)}<span class="pos-badge">${r.p}</span></td><td class="pdob">${career}</td><td class="war-val">WAR ${r.w.toFixed(1)}</td><td class="pdiff ${diffCls(days)}">${diffLabel(days)}</td></tr>`;
-  }).join('');
+  const md=val.slice(4); // e.g. "-12-10"
+  const monthDay=val.slice(5); // "12-10"
+  const [mm,dd]=monthDay.split('-');
+  const monthNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const monthName=monthNames[parseInt(mm)-1];
+
+  document.getElementById('war-title').textContent='Top WAR';
+  document.getElementById('war-year-label').textContent=birthYear+' births';
+  document.getElementById('war-bday-label').textContent=monthName+' '+parseInt(dd)+' birthdays';
+
+  const yearClass=allPlayers.filter(r=>r.b.startsWith(birthYear)).sort((a,b)=>b.w-a.w).slice(0,10);
+  const bdayClass=allPlayers.filter(r=>r.b.endsWith(md)).sort((a,b)=>b.w-a.w).slice(0,10);
+
+  function warRow(r,i){
+    return `<tr><td>${i+1}</td><td class="pname">${r.n}${hofStar(r)}<span class="pos-badge">${r.p}</span></td><td class="war-val">WAR ${r.w.toFixed(1)}</td></tr>`;
+  }
+
+  document.getElementById('war-year-table').innerHTML=yearClass.map(warRow).join('');
+  document.getElementById('war-bday-table').innerHTML=bdayClass.map(warRow).join('');
+  document.getElementById('war-meta').textContent=yearClass.length+' in birth year / '+bdayClass.length+' on birthday';
 
   // BIRTH YEAR EVENTS
   const yr=parseInt(birthYear);
@@ -439,7 +458,8 @@ function run(){
       if(!found.length) continue;
       const names=found.map(a=>{
         const name=PID_NAME[a.pid]||a.pid;
-        return a.t ? name+' <span style="color:var(--txd);font-size:10px">('+a.t+')</span>' : name;
+        const team=a.t?fcode(a.t):'';
+        return name+(team?' <span style="color:var(--txd);font-size:10px">('+team+')</span>':'');
       }).join(' / ');
       awardCards.push(`<div class="ecard"><div class="ecard-label">${awardShort[award]} &mdash; ${lg}</div><div class="ecard-name">${names}</div></div>`);
     }
@@ -455,7 +475,7 @@ function run(){
   } else {
     const winner=teamName(yearWS.w,yr);
     const loser=teamName(yearWS.l,yr);
-    wsHtml=`<div class="ws-card"><div class="ws-label">World Series &mdash; ${birthYear}</div><div class="ws-matchup">${winner}</div><div class="ws-detail">def. ${loser} &nbsp; ${yearWS.wins}&ndash;${yearWS.losses}</div></div>`;
+    wsHtml=`<div class="ws-card"><div class="ws-label">World Series &mdash; ${birthYear}</div><div class="ws-matchup">${winner}</div><div class="ws-detail">def. ${loser} &nbsp;&nbsp; ${yearWS.wins}&ndash;${yearWS.losses}</div></div>`;
   }
   document.getElementById('ws-row').innerHTML=wsHtml;
 
