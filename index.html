@@ -91,7 +91,11 @@ header{padding:2.5rem 0 2rem;text-align:center;border-bottom:1px solid var(--bdr
 .ecard{background:var(--bg2);padding:.9rem 1.1rem;position:relative;transition:background .12s}
 .ecard:hover{background:var(--bg3)}
 .ecard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--evt)}
+.ecard.al::before{background:#4a7fb5}
+.ecard.nl::before{background:#b54a4a}
 .ecard-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--evt);margin-bottom:.35rem}
+.ecard.al .ecard-label{color:#6a9fd4}
+.ecard.nl .ecard-label{color:#d47a7a}
 .ecard-name{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;color:var(--cream);line-height:1}
 .ws-divider{height:1px;background:var(--bdr)}
 .ws-card{background:var(--bg2);padding:1.25rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;transition:background .12s}
@@ -367,7 +371,7 @@ function run(){
   if(mActiveOlder.length>=4){
     mOlderCard=manyCard('mgr-c','Last manager older than you',
       mActiveOlder.length+' still active',
-      'managers born before you managed in 2025');
+      'managers born before you were active in the 2025 season<br>(+15 with no birthdate in Lahman DB)');
   } else if(mActiveOlder.length>0){
     const names=mActiveOlder.sort((a,b)=>a.b.localeCompare(b.b)).map(r=>r.n).join(', ');
     mOlderCard=`<div class="bcard older mgr-c"><div class="bcard-label" style="color:var(--mgr)">Last manager older than you</div><div class="bcard-name" style="font-size:1.1rem;line-height:1.2">${names}</div><div class="bcard-detail">Still managing in 2025</div></div>`;
@@ -439,7 +443,7 @@ function run(){
 
   document.getElementById('war-year-table').innerHTML=yearClass.map(warRow).join('');
   document.getElementById('war-bday-table').innerHTML=bdayClass.map(warRow).join('');
-  document.getElementById('war-meta').textContent=yearClass.length+' in birth year / '+bdayClass.length+' on birthday';
+  document.getElementById('war-meta').textContent='';
 
   // BIRTH YEAR EVENTS
   const yr=parseInt(birthYear);
@@ -461,7 +465,8 @@ function run(){
         const team=a.t?fcode(a.t):'';
         return name+(team?' <span style="color:var(--txd);font-size:10px">('+team+')</span>':'');
       }).join(' / ');
-      awardCards.push(`<div class="ecard"><div class="ecard-label">${awardShort[award]} &mdash; ${lg}</div><div class="ecard-name">${names}</div></div>`);
+      const lgCls = lg==='AL' ? 'al' : lg==='NL' ? 'nl' : '';
+      awardCards.push(`<div class="ecard ${lgCls}"><div class="ecard-label">${awardShort[award]} &mdash; ${lg}</div><div class="ecard-name">${names}</div></div>`);
     }
   }
   if(!awardCards.length){
